@@ -43,7 +43,7 @@ class LinkedList {
 
     insert(index, data) {
         if (index < 0 || index > this.length) {
-            console.log(data);
+            console.log(data); // DEVELOPMENT AID: remove after development
             return -1;
         } else if (index == 0) {
             this.prepend(data);
@@ -62,10 +62,42 @@ class LinkedList {
             newNode.next = tempNode;
             this.length++;
         }
-
-
     }
 
+    delete(index) {
+        if (index < 0 || index >= this.length) {
+            return -1;
+        } else if (index == 0) {
+            this.deleteHead();
+        } else if (index == this.length - 1) {
+            this.deleteTail();
+        } else {
+            let current = this.head;
+            let counter = 0;
+            while (counter < index - 1) {
+                current = current.next;
+                counter++;
+            }
+            current.next = current.next.next;
+            this.length--;
+        }
+    }
 
+    deleteHead() {
+        this.head = this.head.next;
+        this.length--;
+    }
+
+    deleteTail() {
+        let current = this.head;
+        let counter = 0;
+        while (counter < this.length - 2) {
+            current = current.next;
+            counter++;
+        }
+        current.next = null;
+        this.tail = current;
+        this.length--;
+    }
 
 }
