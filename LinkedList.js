@@ -32,6 +32,11 @@ class LinkedList {
     append(data) {
         if (!this.head) {
             this.prepend(data);
+        } else {
+            const node = new Node(data);
+            this.tail.next = node;
+            this.tail = node;
+            this.length++;
         }
     }
 
