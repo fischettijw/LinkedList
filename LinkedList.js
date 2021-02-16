@@ -29,4 +29,10 @@ class LinkedList {
         }
     }
 
+    append(data) {
+        if (!this.head) {
+            this.prepend(data);
+        }
+    }
+
 }
