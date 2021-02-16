@@ -5,12 +5,12 @@ console.clear();
 //--------------------------------------------------------
 
 const linkedList = new LinkedList();
-linkedList.prepend("1st Item");
+linkedList.prepend("1st Prepend");
 // console.log(linkedList);
 
-linkedList.prepend("2nd Item");
-linkedList.prepend("3rd Item");
-linkedList.prepend("4th Item");
+linkedList.prepend("2nd Prepend");
+linkedList.prepend("3rd Prepend");
+linkedList.prepend("4th Prepend");
 // console.log(linkedList);
 // linkedList.append("Test for append without head");
 // linkedList.display();
@@ -18,4 +18,18 @@ linkedList.prepend("4th Item");
 linkedList.append("1st append");
 linkedList.append("2nd append");
 linkedList.append("3rd append");
+linkedList.display();
+
+
+linkedList.append("1st append");
+linkedList.append("2nd append");
+linkedList.append("3rd append");
+linkedList.display();
+
+
+linkedList.insert(-1, "*** Cannot insert - Index < 0 ***");
+linkedList.insert(linkedList.length + 1, "*** Cannot insert - Index > linkList length ***");
+linkedList.insert(0, "Insert at beginning");
+linkedList.insert(linkedList.length, "Insert at end");
+linkedList.insert(3, "Insert at 3");
 linkedList.display();

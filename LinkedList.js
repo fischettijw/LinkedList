@@ -27,6 +27,7 @@ class LinkedList {
             current = current.next;
             counter++;
         }
+        console.log("--------------------------------------------------------\n");
     }
 
     append(data) {
@@ -39,5 +40,32 @@ class LinkedList {
             this.length++;
         }
     }
+
+    insert(index, data) {
+        if (index < 0 || index > this.length) {
+            console.log(data);
+            return -1;
+        } else if (index == 0) {
+            this.prepend(data);
+        } else if (index == this.length) {
+            this.append(data);
+        } else {
+            const newNode = new Node(data);
+            let current = this.head;
+            let counter = 0;
+            while (counter < index - 1) {
+                counter++;
+                current = current.next;
+            }
+            let tempNode = current.next
+            current.next = newNode;
+            newNode.next = tempNode;
+            this.length++;
+        }
+
+
+    }
+
+
 
 }
