@@ -19,16 +19,14 @@ class LinkedList {
     }
 
     display() {
-        const output = [];
         console.log(`Length: ${this.length} || Head: ${this.head.data} || Tail: ${this.tail.data}`);
         let counter = 0;
         let current = this.head
         while (counter < this.length) {
-            output.push(current.data);
+            console.log(`   ${counter}  ${current.data}`)
             current = current.next;
             counter++;
         }
-        console.log(output);
     }
 
 }

@@ -5,11 +5,11 @@ console.clear();
 //--------------------------------------------------------
 
 const linkedList = new LinkedList();
-linkedList.prepend("1st Node");
+linkedList.prepend("1st Item");
 // console.log(linkedList);
 
-linkedList.prepend("2nd Node");
-linkedList.prepend("3rd Node");
-linkedList.prepend("4th Node");
+linkedList.prepend("2nd Item");
+linkedList.prepend("3rd Item");
+linkedList.prepend("4th Item");
 // console.log(linkedList);
 linkedList.display();
