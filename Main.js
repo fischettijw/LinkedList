@@ -37,10 +37,10 @@ const linkedList = new LinkedList();
 for (let i = 0; i < 8; i++) {
     linkedList.append(`${i} appended`);
 }
-// linkedList.display();
-// linkedList.delete(0);
-// linkedList.display();
-// linkedList.delete(linkedList.length - 1);
+linkedList.display();
+linkedList.delete(0);
+linkedList.display();
+linkedList.delete(linkedList.length - 1);
 linkedList.display();
 linkedList.delete(3);
 linkedList.display();
